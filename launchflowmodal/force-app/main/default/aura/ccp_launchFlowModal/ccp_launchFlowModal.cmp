@@ -1,0 +1,40 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+    <aura:attribute name="buttonLabel" type="String" access="global" default="Launch Flow" required="true"/>
+    <aura:attribute name="align" type="String" access="global" default="Center" required="true"/>
+    <aura:attribute name="flowName" type="String" access="global" default="" required="true"/>
+    <aura:attribute name="flowModalHeader" type="String" access="global"/> 
+    <aura:attribute name="flowInputVariablesString" type="String" access="global"/>
+    <aura:attribute name="autoLaunchFlow" type="Boolean" default="false" access="global"/>
+    <aura:attribute name="hideButton" type="Boolean" default="false" access="global"/>
+    <aura:attribute name="buttonBackgroundColor" type="String" default="" access="global"/>
+    <aura:attribute name="buttonTextColor" type="String" default="" access="global"/>
+    <aura:attribute name="hideFlowTransitionOverlay" type="Boolean" default="true" access="global"/>
+    <aura:attribute name="refreshPageOnFlowCompletion" type="Boolean" default="false" access="global"/>  
+
+    <aura:attribute name="flowInputVariables" type="Object" access="global"/>
+    <aura:attribute name="flowOutputVariables" type="Object" access="global"/>    
+    
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    
+    <aura:dependency resource="force:showToast" type="EVENT" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    
+    <aura:if isTrue="{!!v.hideButton}">
+        <div class="slds">
+            <div class="slds-p-vertical_medium min-height-64px">
+                <button 
+                class="{!'slds-button slds-button_brand ' + if(v.align == 'Left','slds-float_left slds-m-left_large',if(v.align == 'Right','slds-float_right slds-m-right_large','center'))}" 
+                style="{!
+                        if(empty(v.buttonBackgroundColor), '', 'background-color: ' + v.buttonBackgroundColor + 
+                        '; border-color: ' + v.buttonBackgroundColor + '; ') +
+                        if(empty(v.buttonTextColor), '', 'color: ' + v.buttonTextColor + '; ')
+                        }"
+                onclick="{!c.handleShowModal}">
+                    {!v.buttonLabel}
+                </button>
+            </div>
+        </div>
+    </aura:if>
+</aura:component>
