@@ -35,4 +35,7 @@
 
     <design:attribute name="refreshPageOnFlowCompletion" label="Refresh Page on Flow Completion" default="false"
     description="Checking this box will refresh the page upon completion of the flow."/>
+
+    <design:attribute name="redirectUrlOnFlowCompletion" label="Redirect to Url on Flow Completion" default=""
+    description="Url to redirect to upon flow completion. This setting will override the Refresh Page on Flow Completion setting."/>
 </design:component>

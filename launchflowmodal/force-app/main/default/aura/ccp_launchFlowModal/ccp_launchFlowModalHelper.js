@@ -14,7 +14,8 @@
                                     flowInputVariables: component.get("v.flowInputVariables"),
                                     flowOutputVariables: component.getReference("v.flowOutputVariables"),
                                     hideFlowTransitionOverlay: component.get("v.hideFlowTransitionOverlay"),
-                                    refreshPageOnFlowCompletion: component.get("v.refreshPageOnFlowCompletion")
+                                    refreshPageOnFlowCompletion: component.get("v.refreshPageOnFlowCompletion"),
+                                    redirectUrlOnFlowCompletion: component.get("v.redirectUrlOnFlowCompletion")
                                },
                                function(content, status) {
                                    if (status === "SUCCESS") {

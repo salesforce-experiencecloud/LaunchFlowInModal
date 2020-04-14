@@ -26,7 +26,13 @@
             component.set("v.flowOutputVariables",flowOutputVariables);
             
             var refreshPageOnFlowCompletion = component.get("v.refreshPageOnFlowCompletion");
-            if(refreshPageOnFlowCompletion)
+            var redirectUrlOnFlowCompletion = component.get("v.redirectUrlOnFlowCompletion");
+            
+            if(redirectUrlOnFlowCompletion !== undefined && redirectUrlOnFlowCompletion.trim() !== '')
+            {
+                window.location.href = redirectUrlOnFlowCompletion;
+            }
+            else if(refreshPageOnFlowCompletion)
             {
                 window.location.reload();
             }

@@ -9,7 +9,8 @@
     <aura:attribute name="buttonBackgroundColor" type="String" default="" access="global"/>
     <aura:attribute name="buttonTextColor" type="String" default="" access="global"/>
     <aura:attribute name="hideFlowTransitionOverlay" type="Boolean" default="true" access="global"/>
-    <aura:attribute name="refreshPageOnFlowCompletion" type="Boolean" default="false" access="global"/>  
+    <aura:attribute name="refreshPageOnFlowCompletion" type="Boolean" default="false" access="global"/>
+    <aura:attribute name="redirectUrlOnFlowCompletion" type="String" default="" access="global"/>  
 
     <aura:attribute name="flowInputVariables" type="Object" access="global"/>
     <aura:attribute name="flowOutputVariables" type="Object" access="global"/>    
