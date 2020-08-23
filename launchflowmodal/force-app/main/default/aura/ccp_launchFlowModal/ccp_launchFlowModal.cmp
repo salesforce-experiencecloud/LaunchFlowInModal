@@ -11,6 +11,7 @@
     <aura:attribute name="hideFlowTransitionOverlay" type="Boolean" default="true" access="global"/>
     <aura:attribute name="refreshPageOnFlowCompletion" type="Boolean" default="false" access="global"/>
     <aura:attribute name="redirectUrlOnFlowCompletion" type="String" default="" access="global"/>  
+    <aura:attribute name="hideModalCloseButton" type="Boolean" default="false" access="global"/>
 
     <aura:attribute name="flowInputVariables" type="Object" access="global"/>
     <aura:attribute name="flowOutputVariables" type="Object" access="global"/>    
@@ -26,7 +27,7 @@
         <div class="slds">
             <div class="slds-p-vertical_medium min-height-64px">
                 <button 
-                class="{!'slds-button slds-button_brand ' + if(v.align == 'Left','slds-float_left slds-m-left_large',if(v.align == 'Right','slds-float_right slds-m-right_large','center'))}" 
+                class="{!'slds-button slds-button_brand ' + if(v.align == 'Left','slds-float_left slds-m-left_large',if(v.align == 'Right','slds-float_right slds-m-right_large','lfm-center'))}" 
                 style="{!
                         if(empty(v.buttonBackgroundColor), '', 'background-color: ' + v.buttonBackgroundColor + 
                         '; border-color: ' + v.buttonBackgroundColor + '; ') +

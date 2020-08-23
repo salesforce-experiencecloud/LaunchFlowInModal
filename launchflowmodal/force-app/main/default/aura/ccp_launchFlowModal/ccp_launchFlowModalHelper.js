@@ -23,7 +23,7 @@
                                        component.find('overlayLib').showCustomModal({
                                            header: component.get("v.flowModalHeader"),
                                            body: modalBody, 
-                                           showCloseButton: true,
+                                           showCloseButton: !component.get("v.hideModalCloseButton"),
                                            cssClass: "",
                                            closeCallback: function() {
                                                //alert('You closed the alert!');

@@ -1,6 +1,19 @@
 ({
     doInit: function(component, event, helper) {
+        var hideModalCloseButton = component.get("v.hideModalCloseButton");
+        if(hideModalCloseButton !== undefined && hideModalCloseButton === true)
+        {
+            window.addEventListener("keydown", function(event) {
+                var kcode = event.code;
+                if(hideModalCloseButton !== undefined && hideModalCloseButton === true && kcode === 'Escape'){
+
+                    event.preventDefault();
+                    event.stopImmediatePropagation();
+                }
+            }, true);
+        }
         
+
         var flowInputVariablesString = component.get("v.flowInputVariablesString");
 
         if(!$A.util.isEmpty(flowInputVariablesString))
