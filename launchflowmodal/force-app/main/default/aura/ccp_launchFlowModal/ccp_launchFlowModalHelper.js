@@ -15,20 +15,27 @@
                                     flowOutputVariables: component.getReference("v.flowOutputVariables"),
                                     hideFlowTransitionOverlay: component.get("v.hideFlowTransitionOverlay"),
                                     refreshPageOnFlowCompletion: component.get("v.refreshPageOnFlowCompletion"),
-                                    redirectUrlOnFlowCompletion: component.get("v.redirectUrlOnFlowCompletion")
+                                    redirectUrlOnFlowCompletion: component.get("v.redirectUrlOnFlowCompletion"),
+                                    fixedModalWidthHeight: component.get("v.fixedModalWidthHeight"),
+                                    modalWidth: component.get("v.modalWidth"),
+                                    modalHeight: component.get("v.modalHeight")
                                },
                                function(content, status) {
                                    if (status === "SUCCESS") {
-                                       modalBody = content;
-                                       component.find('overlayLib').showCustomModal({
-                                           header: component.get("v.flowModalHeader"),
-                                           body: modalBody, 
-                                           showCloseButton: !component.get("v.hideModalCloseButton"),
-                                           cssClass: "",
-                                           closeCallback: function() {
-                                               //alert('You closed the alert!');
-                                           }
-                                       })
+                                        var fixedModalWidthHeight = component.get("v.fixedModalWidthHeight");
+                                        var cssClass = 'lfm-modal-container';
+                                        cssClass += (fixedModalWidthHeight === true) ? ' lfm-modal-fixed-width-height' : '' ;
+                                        modalBody = content;
+                                        
+                                        component.find('overlayLib').showCustomModal({
+                                            header: component.get("v.flowModalHeader"),
+                                            body: modalBody, 
+                                            showCloseButton: !component.get("v.hideModalCloseButton"),
+                                            cssClass: cssClass,
+                                            closeCallback: function() {
+                                                //alert('You closed the alert!');
+                                            }
+                                        })
                                    }                               
                                });
         }

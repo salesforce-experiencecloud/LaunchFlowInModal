@@ -8,10 +8,18 @@
     <aura:attribute name="hideButton" type="Boolean" default="false" access="global"/>
     <aura:attribute name="buttonBackgroundColor" type="String" default="" access="global"/>
     <aura:attribute name="buttonTextColor" type="String" default="" access="global"/>
+    <aura:attribute name="buttonTextSize" type="String" default="" access="global"/>
     <aura:attribute name="hideFlowTransitionOverlay" type="Boolean" default="true" access="global"/>
     <aura:attribute name="refreshPageOnFlowCompletion" type="Boolean" default="false" access="global"/>
     <aura:attribute name="redirectUrlOnFlowCompletion" type="String" default="" access="global"/>  
     <aura:attribute name="hideModalCloseButton" type="Boolean" default="false" access="global"/>
+    <aura:attribute name="applyCardBackground" type="Boolean" default="false" access="global"/>
+    <aura:attribute name="fixedModalWidthHeight" type="Boolean" default="false" access="global"/>
+    <aura:attribute name="modalWidth" type="String" default="800px" access="global"/>
+    <aura:attribute name="modalHeight" type="String" default="600px" access="global"/>
+    <aura:attribute name="fixedButtonWidthHeight" type="Boolean" default="false" access="global"/>
+    <aura:attribute name="buttonWidth" type="String" default="100px" access="global"/>
+    <aura:attribute name="buttonHeight" type="String" default="100px" access="global"/>
 
     <aura:attribute name="flowInputVariables" type="Object" access="global"/>
     <aura:attribute name="flowOutputVariables" type="Object" access="global"/>    
@@ -20,18 +28,23 @@
     
     <aura:dependency resource="force:showToast" type="EVENT" />
     
-    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <ltng:require
+    styles="{!$Resource.lfmCSS}"/>
 
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
     
     <aura:if isTrue="{!!v.hideButton}">
-        <div class="slds">
+        <div class="{!'slds ' + if(v.applyCardBackground,'slds-card', '')}">
             <div class="slds-p-vertical_medium min-height-64px">
                 <button 
                 class="{!'slds-button slds-button_brand ' + if(v.align == 'Left','slds-float_left slds-m-left_large',if(v.align == 'Right','slds-float_right slds-m-right_large','lfm-center'))}" 
                 style="{!
                         if(empty(v.buttonBackgroundColor), '', 'background-color: ' + v.buttonBackgroundColor + 
                         '; border-color: ' + v.buttonBackgroundColor + '; ') +
-                        if(empty(v.buttonTextColor), '', 'color: ' + v.buttonTextColor + '; ')
+                        if(empty(v.buttonTextColor), '', 'color: ' + v.buttonTextColor + '; ') + 
+                        if(empty(v.buttonTextSize), '', 'font-size: ' + v.buttonTextSize + '; ') + 
+                        if(v.fixedButtonWidthHeight, 'width: ' + v.buttonWidth + '; height: ' + v.buttonHeight + ';', '')
                         }"
                 onclick="{!c.handleShowModal}">
                     {!v.buttonLabel}

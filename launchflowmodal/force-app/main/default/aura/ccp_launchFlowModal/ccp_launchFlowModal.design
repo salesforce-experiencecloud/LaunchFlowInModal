@@ -30,6 +30,9 @@
     <design:attribute name="buttonTextColor" label="Button Text Color" default=""
     description="CSS Text color for button. Leave blank if you want the button to inherit the default brand color, otherwise specify a CSS color."/>
 
+    <design:attribute name="buttonTextSize" label="Button Text Size" default=""
+    description="CSS Text size for button. Leave blank if you want the button text to inherit the default size, otherwise specify a size value."/>
+
     <design:attribute name="hideFlowTransitionOverlay" label="Hide Flow Transition Overlay" default="true"
     description="Checking this box will hide the overlay during flow transitions from one step to another."/>
 
@@ -41,4 +44,25 @@
 
     <design:attribute name="hideModalCloseButton" label="Hide Modal Close Button" default="false"
     description="Checking this box will hide the Modal Close button."/>
+ 
+    <design:attribute name="applyCardBackground" label="Apply Card Background" default="false"
+    description="Checking this box will apply the slds card background."/>
+
+    <design:attribute name="fixedModalWidthHeight" label="Fixed Modal Width / Height" default="false"
+    description="Checking this box will apply a fixed width and height to the modal, based on the specified width and height."/>
+
+    <design:attribute name="modalWidth" label="Fixed Modal Width" default="800px"
+    description="The width value for the fixed modal width / height mode."/>
+
+    <design:attribute name="modalHeight" label="Fixed Modal Height" default="600px"
+    description="The height value for the fixed modal width / height mode."/>
+
+    <design:attribute name="fixedButtonWidthHeight" label="Fixed Button Width / Height" default="false"
+    description="Checking this box will apply a fixed width and height to the button, based on the specified width and height."/>
+
+    <design:attribute name="buttonWidth" label="Fixed Button Width" default="100px"
+    description="The width value for the fixed button width / height mode."/>
+
+    <design:attribute name="buttonHeight" label="Fixed Button Height" default="100px"
+    description="The height value for the fixed button width / height mode."/>
 </design:component>

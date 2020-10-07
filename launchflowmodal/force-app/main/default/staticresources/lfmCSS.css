@@ -1,0 +1,4 @@
+.lfm-modal-container.lfm-modal-fixed-width-height > div.modal-container {
+  width: max-content;
+  max-width: max-content;
+}
