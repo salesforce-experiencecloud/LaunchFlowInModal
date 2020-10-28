@@ -1,0 +1,17 @@
+<aura:component access="global">
+    <aura:attribute name="renderFooter" type="Boolean" default="false" access="global"/>
+    <aura:attribute name="hideModalCloseButton" type="Boolean" default="false" access="global"/>
+
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    
+    <aura:if isTrue="{!v.renderFooter}">
+        <aura:if isTrue="{!!v.hideModalCloseButton}">
+
+            <div class="slds-align_absolute-center">
+                <button class="slds-button slds-button_neutral" onclick="{!c.handleCloseModal}">Close</button>
+            </div>
+
+        </aura:if>
+    </aura:if>
+
+</aura:component>	

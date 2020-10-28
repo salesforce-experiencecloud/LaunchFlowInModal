@@ -44,6 +44,9 @@
 
     <design:attribute name="hideModalCloseButton" label="Hide Modal Close Button" default="false"
     description="Checking this box will hide the Modal Close button."/>
+
+    <design:attribute name="renderFooter" label="Render Modal Footer" default="false"
+    description="Checking this box will render the modal footer."/>
  
     <design:attribute name="applyCardBackground" label="Apply Card Background" default="false"
     description="Checking this box will apply the slds card background."/>
