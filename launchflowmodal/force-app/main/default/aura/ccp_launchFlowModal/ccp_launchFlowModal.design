@@ -47,6 +47,9 @@
 
     <design:attribute name="renderFooter" label="Render Modal Footer" default="false"
     description="Checking this box will render the modal footer."/>
+
+    <design:attribute name="closeButtonText" label="Text for Close button in footer" default="Close"
+    description="The text for the Close button in the footer"/>
  
     <design:attribute name="applyCardBackground" label="Apply Card Background" default="false"
     description="Checking this box will apply the slds card background."/>

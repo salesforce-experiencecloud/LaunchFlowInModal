@@ -25,7 +25,8 @@
                                     ["c:ccp_renderFlowFooter", 
                                     {
                                         renderFooter: component.get("v.renderFooter"),
-                                        hideModalCloseButton: component.get("v.hideModalCloseButton")
+                                        hideModalCloseButton: component.get("v.hideModalCloseButton"),
+                                        closeButtonText: component.get("v.closeButtonText")
                                     }]
                                 ],
                                function(components, status) {

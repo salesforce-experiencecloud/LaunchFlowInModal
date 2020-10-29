@@ -1,6 +1,7 @@
 <aura:component access="global">
     <aura:attribute name="renderFooter" type="Boolean" default="false" access="global"/>
     <aura:attribute name="hideModalCloseButton" type="Boolean" default="false" access="global"/>
+    <aura:attribute name="closeButtonText" type="String" default="Close" access="global"/>
 
     <lightning:overlayLibrary aura:id="overlayLib"/>
     
@@ -8,7 +9,7 @@
         <aura:if isTrue="{!!v.hideModalCloseButton}">
 
             <div class="slds-align_absolute-center">
-                <button class="slds-button slds-button_neutral" onclick="{!c.handleCloseModal}">Close</button>
+                <button class="slds-button slds-button_neutral" onclick="{!c.handleCloseModal}">{!v.closeButtonText}</button>
             </div>
 
         </aura:if>
