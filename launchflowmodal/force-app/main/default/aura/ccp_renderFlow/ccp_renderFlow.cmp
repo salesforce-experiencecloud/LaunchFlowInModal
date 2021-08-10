@@ -16,7 +16,7 @@
     <lightning:overlayLibrary aura:id="overlayLib"/>
     
     <aura:if isTrue="{!v.flowStatus != 'FINISHED'}">
-        <div class="{!if(v.hideFlowTransitionOverlay,'hideOverlay ','') + if(v.hideModalCloseButton,'lfm-hide-close-button','')}"
+        <div class="{!if(v.hideFlowTransitionOverlay,'hideOverlay ','')}"
                 style="{!if(v.fixedModalWidthHeight, 'width: ' + v.modalWidth + '; height: ' + v.modalHeight + ';', '')}" >
             <lightning:flow aura:id="flowRenderer" onstatuschange="{!c.handleStatusChange}"/>
         </div> 
