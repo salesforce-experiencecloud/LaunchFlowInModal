@@ -22,6 +22,7 @@
     <aura:attribute name="fixedButtonWidthHeight" type="Boolean" default="false" access="global"/>
     <aura:attribute name="buttonWidth" type="String" default="100px" access="global"/>
     <aura:attribute name="buttonHeight" type="String" default="100px" access="global"/>
+    <aura:attribute name="buttonBorderRadius" type="String" default="" access="global"/>
 
     <aura:attribute name="flowInputVariables" type="Object" access="global"/>
     <aura:attribute name="flowOutputVariables" type="Object" access="global"/>    
@@ -46,7 +47,8 @@
                         '; border-color: ' + v.buttonBackgroundColor + '; ') +
                         if(empty(v.buttonTextColor), '', 'color: ' + v.buttonTextColor + '; ') + 
                         if(empty(v.buttonTextSize), '', 'font-size: ' + v.buttonTextSize + '; ') + 
-                        if(v.fixedButtonWidthHeight, 'width: ' + v.buttonWidth + '; height: ' + v.buttonHeight + ';', '')
+                        if(v.fixedButtonWidthHeight, 'width: ' + v.buttonWidth + '; height: ' + v.buttonHeight + ';', '') + 
+                        if(empty(v.buttonBorderRadius), '', 'border-radius:' + v.buttonBorderRadius + ';')
                         }"
                 onclick="{!c.handleShowModal}">
                     {!v.buttonLabel}

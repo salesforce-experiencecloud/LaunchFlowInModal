@@ -71,4 +71,7 @@
 
     <design:attribute name="buttonHeight" label="Fixed Button Height" default="100px"
     description="The height value for the fixed button width / height mode."/>
+
+    <design:attribute name="buttonBorderRadius" label="Button Border Radius" default=""
+    description="The border radius value for the button. Example: 20px"/>
 </design:component>
