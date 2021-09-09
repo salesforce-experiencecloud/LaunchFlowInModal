@@ -1,4 +1,4 @@
-<aura:component >
+<aura:component implements="lightningcommunity:allowInRelaxedCSP">
     <aura:attribute name="flowName" type="String"/>
     <aura:attribute name="flowInputVariables" type="Object"/>
     <aura:attribute name="flowOutputVariables" type="Object"/>
