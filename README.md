@@ -11,11 +11,12 @@
 
 # Overview:  
 
-[Image: LaunchFlowModal.gif]![image](https://user-images.githubusercontent.com/8514282/153292662-126aa606-876c-49df-bb8a-0e60baec53c4.gif)
+[image](https://user-images.githubusercontent.com/8514282/153292662-126aa606-876c-49df-bb8a-0e60baec53c4.gif)
 AppExchange Listing:  
 https://appexchange.salesforce.com/appxListingDetail?listingId=a0N3A00000FMYinUAH
 
 Open-Source Code:
+https://github.com/salesforce-experiencecloud/LaunchFlowInModal
 
 
 ## Description:
