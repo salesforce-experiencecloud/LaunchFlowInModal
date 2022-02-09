@@ -54,18 +54,18 @@ Can be used on any lightning page.
                   {
                      "name" : "testInput1", "type" : "String", "value": "{!recordId}" 
                   },
-                `  {
+                  {
                      "name" : "testInput2", "type" : "Boolean", "value": "false" 
-                  }`
+                  }
                 ]`
         2. LEX App Builder example (_RECORDID_ is case insensitive):
             1. `[
                   {
                      "name" : "testInput1", "type" : "String", "value": "_RECORDID_" 
                   },
-                `  {
+                  {
                      "name" : "testInput2", "type" : "Boolean", "value": "false" 
-                  }`
+                  }
                 ]`
     4. **Auto Launch Flow [autoLaunchFlow]:** Check to launch the flow right after the component renders.
     5. **Hide Button [hideButton]:** Check to hide the button (no UI). Assumed to be used with Auto Launch Flow checked if you only want to have the flow auto launch upon rendering and not allow the user to click and launch the flow themselves.
