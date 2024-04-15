@@ -27,7 +27,7 @@
     },
     
     handleStatusChange : function (component, event) {
-        if(event.getParam("status") === "FINISHED") {
+        if(event.getParam("status") === "FINISHED" || event.getParam("status") === "FINISHED_SCREEN" ) {
             component.set("v.flowStatus", "FINISHED");
             var flowOutputVariables = event.getParam("outputVariables");
             component.set("v.flowOutputVariables",flowOutputVariables);
